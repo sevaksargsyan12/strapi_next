@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #F9FAFB;
+}
+
+html {
+  overflow:   scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Classes */
+
+.fadeIn {
+  animation: fadeInAnimation ease-in-out 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: fadeOutAnimation ease 0.4s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+    display: block;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/* scrollbars */
+
+.pretty-scroll::-webkit-scrollbar ,
+.pretty-scroll::-webkit-scrollbar {
+  border-radius: 6px;
+  width: 4px;
+}
+
+.pretty-scroll::-webkit-scrollbar-track {
+  background: #E1EFFE;
+  width: 4px;
+
+}
+
+.pretty-scroll::-webkit-scrollbar-thumb {
+  background: #A4CAFE;
+  border-radius: 6px;
+  width: 4px;
+}
+
+.reviews-list-wrapper {
+  position: relative;
+}
+
+.reviews-list-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left:  100%;
+  bottom: 0;
+  width: 100px;
+  background-image: linear-gradient(to right, #fff , #F9FAFB);
+  background-image: -webkit-linear-gradient(to right, #fff , #F9FAFB); /* Safari 5.1-6, Chrome 10-25 */
+  background-image: -o-linear-gradient(to right, #fff , #F9FAFB); /* Opera 11.1-12 */
+  background-image: -moz-linear-gradient(to right, #fff , #F9FAFB); /* Firefox 3.6-15 */
+  background-image: -ms-linear-gradient(to right, #fff , #F9FAFB); /* IE 10 */
+}
