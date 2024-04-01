@@ -44,7 +44,7 @@ npm run develop
 ```
 
 ## environment variables
-In backend see [.env.local.example]
-In frontend see [.env.example]
+In backend see [.env.example]
+In frontend see [.env.local.example]
 
 
